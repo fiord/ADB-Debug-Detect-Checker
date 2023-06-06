@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">USB Debug Checker</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="check">Check</string>
+    <string name="adb_enabled">Settings.adb_enabled:</string>
+</resources>
