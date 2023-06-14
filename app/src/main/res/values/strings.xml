@@ -4,4 +4,6 @@
     <!-- Strings used for fragments for navigation -->
     <string name="check">Check</string>
     <string name="adb_enabled">Settings.adb_enabled:</string>
+    <string name="wifi_debug_enabled">Settings.adb_wifi_enabled:</string>
+    <string name="developer_mode_enabled">Settings.developing_settings_enabled:</string>
 </resources>

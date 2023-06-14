@@ -52,9 +52,21 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();
+
+                // the most simple one
                 int adb = Settings.Secure.getInt(context.getContentResolver(),  Settings.Global.ADB_ENABLED, 0);
-                final TextView adb_enabled = (TextView) binding.getRoot().getViewById(R.id.adb_enabled);
-                adb_enabled.setCompoundDrawablesWithIntrinsicBounds(0, 0, DebugResultIcon(adb), 0);
+                TextView adb_enabled = (TextView) binding.getRoot().getViewById(R.id.adb_enabled);
+                adb_enabled.setCompoundDrawablesWithIntrinsicBounds(0, 0, DebugResultIcon(adb),0);
+
+                // with wifi detection
+                int wifi = Settings.Secure.getInt(context.getContentResolver(), "adb_wifi_enabled", 0);
+                adb_enabled = (TextView) binding.getRoot().getViewById(R.id.adb_wifi_enabled);
+                adb_enabled.setCompoundDrawablesWithIntrinsicBounds(0, 0, DebugResultIcon(wifi),0);
+
+                // too serious one
+                int developer_mode = Settings.Secure.getInt(context.getContentResolver(), Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+                adb_enabled = (TextView) binding.getRoot().getViewById(R.id.developer_mode_enabled);
+                adb_enabled.setCompoundDrawablesWithIntrinsicBounds(0, 0, DebugResultIcon(developer_mode), 0);
             }
         });
     }
